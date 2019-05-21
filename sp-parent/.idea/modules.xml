@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../sp-api/sp-api.iml" filepath="$PROJECT_DIR$/../sp-api/sp-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sp-common/sp-common.iml" filepath="$PROJECT_DIR$/../sp-common/sp-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sp-dao/sp-dao.iml" filepath="$PROJECT_DIR$/../sp-dao/sp-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sp-parent.iml" filepath="$PROJECT_DIR$/sp-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sp-service/sp-service.iml" filepath="$PROJECT_DIR$/../sp-service/sp-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sp-web/sp-web.iml" filepath="$PROJECT_DIR$/../sp-web/sp-web.iml" />
+    </modules>
+  </component>
+</project>

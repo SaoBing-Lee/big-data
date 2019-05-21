@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="sp-api" />
+        <module name="sp-common" />
+        <module name="sp-dao" />
+        <module name="sp-service" />
+        <module name="sp-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sp-api" target="1.8" />
+      <module name="sp-common" target="1.8" />
+      <module name="sp-dao" target="1.8" />
+      <module name="sp-parent" target="1.8" />
+      <module name="sp-service" target="1.8" />
+      <module name="sp-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="sp-api" options="-parameters" />
+      <module name="sp-common" options="-parameters" />
+      <module name="sp-dao" options="-parameters" />
+      <module name="sp-service" options="-parameters" />
+      <module name="sp-web" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.WechatUserMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.WechatUser">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="avatar_url" jdbcType="VARCHAR" property="avatarUrl" />
+    <result column="gender" jdbcType="VARCHAR" property="gender" />
+    <result column="country" jdbcType="VARCHAR" property="country" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, nick_name, open_id, avatar_url, gender, country, province, city, create_time, update_time
+  </sql>
+  <!-- 根据用户openid获取用户id -->
+  <select id="getWechatUser"  resultMap="BaseResultMap" parameterType="java.lang.String">
+    select <include refid="Base_Column_List"/> from new_beauty_user where open_id=#{openId}
+  </select>
+  <!--统计用户数量-->
+  <select id="wechatUserCount" resultType="java.lang.Long" parameterType="java.lang.String">
+    SELECT
+        COUNT( id )
+  FROM
+    new_beauty_user
+    <where>
+      1=1
+      <if test="strTime != null">
+        and create_time &gt;=#{strTime}
+      </if>
+      <if test="endTime != null">
+        and create_time &lt;=#{endTime}
+      </if>
+    </where>
+  </select>
+
+  <!-- 后台获取用户列表-->
+  <select id="selectBackUserList" resultType="com.yangzhongli.sp.dao.dto.UserDTO" parameterType="java.util.Map">
+    SELECT
+      u.id,
+      u.nick_name AS nickName,
+      u.avatar_url AS avatarUrl,
+      u.create_time AS createTime,
+      a.address,
+      a.address_detail AS addressDetail,
+      a.phone
+    FROM
+    new_beauty_user AS u
+    INNER JOIN ka_address AS a ON u.id = a.user_id
+    <where>
+      1=1
+      <if test="phone != null">
+        and a.phone=#{phone}
+      </if>
+      <if test="nickName != null">
+        and u.nick_name LIKE CONCAT(#{nickName},'%')
+      </if>
+      <if test="strTime != null">
+        and u.create_time &gt;=#{strTime}
+      </if>
+      <if test="endTime != null">
+        and u.create_time &lt;=#{endTime}
+      </if>
+    </where>
+    order by
+      u.create_time desc
+  </select>
+
+  <!--后台用户登陆验证sys_user-->
+  <select id="userLogin" resultType="java.lang.String" parameterType="java.lang.String">
+        SELECT
+            id
+        FROM
+            sys_user
+        WHERE
+            user_name = #{userName}
+            AND PASSWORD = #{password}
+    </select>
+</mapper>

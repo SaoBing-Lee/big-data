@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="kitchenApplet">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-api/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-api/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-common/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-common/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-dao/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-dao/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-service/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-service/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-web/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../kitchenApplet/sp-web/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

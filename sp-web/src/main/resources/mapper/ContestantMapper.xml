@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.ContestantMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.Contestant">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="code" jdbcType="INTEGER" property="code" />
+    <result column="head_picture" jdbcType="VARCHAR" property="headPicture" />
+    <result column="info_picture" jdbcType="VARCHAR" property="infoPicture" />
+    <result column="occupation" jdbcType="VARCHAR" property="occupation" />
+    <result column="plastic_project" jdbcType="VARCHAR" property="plasticProject" />
+    <result column="declaration" jdbcType="VARCHAR" property="declaration" />
+    <result column="likes_amount" jdbcType="INTEGER" property="likesAmount" />
+    <result column="read_amount" jdbcType="INTEGER" property="readAmount" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
+  </resultMap>
+
+    <!--查询所有人列表-->
+    <select id="selectContestantList" resultType="com.yangzhongli.sp.dao.dto.ContestantDTO" parameterType="java.lang.String">
+
+  SELECT
+      s.id,
+      s.`name`,
+      s.head_picture as headPicture,
+      s.likes_amount AS likesAmount,
+      s.read_amount AS readAmount,
+      s.`code`,
+      r.id as likesRecordId,
+      CASE WHEN
+          r.id IS NULL
+          THEN 0 ELSE 1
+      END AS isLikes
+  FROM
+      new_beauty_contestant AS s
+      LEFT JOIN new_beauty_likes_record AS r ON s.id = r.contestant_id and r.user_id =#{userId}
+  ORDER BY
+       s.`code`
+
+  </select>
+    <!--查询排名前15列表-->
+  <select id="selectLimit" resultType="com.yangzhongli.sp.dao.dto.ContestantDTO" parameterType="java.lang.String">
+
+
+  SELECT
+      s.id,
+      s.`name`,
+      s.head_picture as headPicture,
+      s.likes_amount AS likesAmount,
+      s.read_amount AS readAmount,
+      s.`code`,
+      r.id as likesRecordId,
+      CASE WHEN
+          r.id IS NULL
+          THEN 0 ELSE 1
+      END AS isLikes
+  FROM
+      new_beauty_contestant AS s
+      LEFT JOIN new_beauty_likes_record AS r ON s.id = r.contestant_id and r.user_id =#{userId}
+  ORDER BY
+      s.likes_amount DESC,
+      s.`code` limit 15
+
+  </select>
+
+
+  <!--获取单个信息）-->
+  <select id="getContestant" resultType="com.yangzhongli.sp.dao.dto.ContestantDTO" parameterType="java.lang.String">
+
+  SELECT
+      s.id,
+      s.`name`,
+      s.info_picture AS infoPicture,
+      s.head_picture as headPicture,
+      s.likes_amount AS likesAmount,
+      s.read_amount AS readAmount,
+      s.occupation,
+      s.code,
+      s.plastic_project as plasticProject,
+      s.declaration,
+      r.id as likesRecordId,
+      CASE WHEN
+          r.id IS NULL
+          THEN 0 ELSE 1
+      END AS isLikes
+  FROM
+      new_beauty_contestant AS s
+      LEFT JOIN new_beauty_likes_record AS r ON s.id = r.contestant_id and r.user_id =#{userId}
+  WHERE
+      s.id = #{id}
+
+  </select>
+
+    <!--获取列表最大的code-->
+    <select id="getCode" resultType="java.lang.Integer" parameterType="java.lang.String">
+
+  SELECT
+      s.`code`
+  FROM
+      new_beauty_contestant AS s
+  ORDER BY
+       s.`code` desc limit 1
+
+  </select>
+
+
+<!--后台查询所有人列表-->
+<select id="backList" resultType="com.yangzhongli.sp.dao.dto.ContestantDTO" >
+  SELECT
+      s.id,
+      s.`name`,
+      s.phone,
+      s.age,
+      s.occupation,
+      s.plastic_project as plasticProject,
+      s.declaration,
+      s.head_picture as headPicture,
+      s.likes_amount AS likesAmount,
+      s.read_amount AS readAmount,
+      s.`code`
+  FROM
+      new_beauty_contestant AS s
+  ORDER BY
+       s.`code`
+
+  </select>
+
+</mapper>

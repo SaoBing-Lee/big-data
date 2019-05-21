@@ -1,0 +1,1125 @@
+2019-05-06 15:26:53.931 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 15:26:53.940 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 15:26:53.942 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 15:26:54.579 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 15:26:54.990 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 15:26:55.089 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6b98a075, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2e61d218, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3569fc08, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20b12f8a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e84a8e1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2e554a3b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@54a67a45, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7d42c224, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@56aaaecd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@522a32b1, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@35390ee3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5e01a982]
+2019-05-06 15:26:56.459 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 15:26:56.541 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2209 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 15:26:56.541 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 15:26:56.542 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 15:27:00.622 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 15:27:00.622 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 15:27:00.623 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 15:27:00.817 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 15:27:00.822 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 15:27:00.902 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 34ms. Found 0 repository interfaces.
+2019-05-06 15:27:02.102 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$e712e12e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 15:27:02.117 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f11a34c7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 15:27:02.231 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 15:27:02.588 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 15:27:06.122 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 15:27:07.039 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 15:27:07.437 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 15:27:07.438 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 15:27:07.438 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 15:27:07.439 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 15:27:08.056 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 15:27:08.219 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 15:27:08.325 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 15:27:08.464 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 15:27:08.906 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 15:27:08.972 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 13.652 seconds (JVM running for 23.094)
+2019-05-06 15:27:10.312 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 629 ] - init datasource error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$baf1efd9.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 15:27:10.323 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 646 ] - dataSource init error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$baf1efd9.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 15:27:10.324 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 15:27:10.429 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 15:27:10.430 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 15:27:10.433 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:04:35.990 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:04:36.023 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:04:36.027 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:04:36.219 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:04:36.355 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:04:36.373 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71238fc2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a54a73f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16a0ee18, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d6f0054, org.springframework.test.context.transaction.TransactionalTestExecutionListener@505fc5a4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5fbdfdcf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3bf9ce3e]
+2019-05-06 16:04:36.765 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:04:36.784 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2295 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:04:36.784 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:04:36.785 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:04:38.229 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:04:38.230 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:04:38.230 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:04:38.328 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:04:38.334 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:04:38.416 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 39ms. Found 0 repository interfaces.
+2019-05-06 16:04:39.366 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$bfb053e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:04:39.377 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9b7a77b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:04:39.433 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:04:39.781 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:04:41.768 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:04:42.341 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:04:42.565 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:04:42.566 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:04:42.567 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:04:42.568 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:04:42.916 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:04:43.010 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:04:43.044 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:04:43.086 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:04:43.321 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:04:43.351 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.907 seconds (JVM running for 9.088)
+2019-05-06 16:04:43.915 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 629 ] - init datasource error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$c94b6f34.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 16:04:43.923 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 646 ] - dataSource init error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$c94b6f34.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 16:04:43.924 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:04:44.016 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:04:44.017 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:04:44.020 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:07:05.573 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:07:05.581 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:07:05.602 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:07:06.109 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:07:06.274 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:07:06.313 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 16:07:07.055 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:07:07.109 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2314 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:07:07.109 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:07:07.110 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:07:09.696 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:07:09.697 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:07:09.697 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:07:09.741 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:07:09.744 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:07:09.791 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-05-06 16:07:10.337 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$71a6f47c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:07:10.349 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bae4815] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:07:10.435 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:07:10.761 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:07:12.849 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:07:14.127 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:07:14.328 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:07:14.329 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:07:14.330 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:07:14.330 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:07:14.986 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:07:15.151 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:07:15.204 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:07:15.287 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:07:15.589 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:07:15.621 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 9.093 seconds (JVM running for 11.976)
+2019-05-06 16:07:16.391 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 629 ] - init datasource error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$8fbfa77e.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 16:07:16.398 - [ ERROR ] [ com.alibaba.druid.pool.DruidDataSource : 646 ] - dataSource init error
+java.sql.SQLNonTransientConnectionException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:79)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:131)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:227)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:148)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:211)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:142)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1377)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1431)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:618)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:915)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:911)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:98)
+	at org.springframework.jdbc.datasource.DataSourceTransactionManager.doBegin(DataSourceTransactionManager.java:262)
+	at org.springframework.transaction.support.AbstractPlatformTransactionManager.getTransaction(AbstractPlatformTransactionManager.java:378)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.createTransactionIfNecessary(TransactionAspectSupport.java:474)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:289)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:688)
+	at com.yangzhongli.sp.service.impl.ContestantServiceImpl$$EnhancerBySpringCGLIB$$8fbfa77e.saveLikesRecord(<generated>)
+	at com.yangzhongli.sp.service.ContestantServiceTests.saveLikes(ContestantServiceTests.java:43)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestExecutionCallbacks.evaluate(RunBeforeTestExecutionCallbacks.java:74)
+	at org.springframework.test.context.junit4.statements.RunAfterTestExecutionCallbacks.evaluate(RunAfterTestExecutionCallbacks.java:84)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestMethodCallbacks.evaluate(RunBeforeTestMethodCallbacks.java:75)
+	at org.springframework.test.context.junit4.statements.RunAfterTestMethodCallbacks.evaluate(RunAfterTestMethodCallbacks.java:86)
+	at org.springframework.test.context.junit4.statements.SpringRepeat.evaluate(SpringRepeat.java:84)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:251)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.UnableToConnectException: Cannot load connection class because of underlying exception: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	... 49 common frames omitted
+Caused by: com.mysql.cj.exceptions.WrongArgumentException: The database URL cannot be null.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.conf.ConnectionUrlParser.isConnectionStringSupported(ConnectionUrlParser.java:149)
+	at com.mysql.cj.conf.ConnectionUrl.acceptsUrl(ConnectionUrl.java:258)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:195)
+	... 48 common frames omitted
+2019-05-06 16:07:16.399 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:07:16.495 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:07:16.495 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:07:16.499 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:11:49.922 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:11:49.933 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:11:49.942 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:11:50.455 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:11:50.632 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:11:50.651 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 16:11:51.197 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:11:51.281 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2479 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:11:51.283 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:11:51.284 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:11:53.677 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:11:53.677 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:11:53.677 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:11:53.731 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:11:53.735 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:11:53.789 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 30ms. Found 0 repository interfaces.
+2019-05-06 16:11:54.397 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$55bdcbf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:11:54.409 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fc51f89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:11:54.473 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:11:54.739 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:11:56.713 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:11:57.383 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:11:57.625 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:11:57.625 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:11:57.626 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:11:57.626 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:11:58.015 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:11:58.105 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:11:58.139 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:11:58.184 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:11:58.375 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:11:58.413 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 7.645 seconds (JVM running for 10.614)
+2019-05-06 16:11:58.838 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:11:58.933 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:11:58.934 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:11:58.936 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:25:40.166 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:25:40.239 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:25:40.312 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:25:41.257 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:25:41.813 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:25:41.976 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71238fc2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a54a73f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16a0ee18, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d6f0054, org.springframework.test.context.transaction.TransactionalTestExecutionListener@505fc5a4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5fbdfdcf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3bf9ce3e]
+2019-05-06 16:25:45.366 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:25:45.414 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2544 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:25:45.414 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:25:45.415 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:25:51.556 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:25:51.561 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:25:51.561 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:25:51.763 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:25:51.769 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:25:51.849 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-05-06 16:25:53.244 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$bfb053e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:25:53.255 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9b7a77b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:25:53.386 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:25:54.313 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:25:59.567 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:26:00.663 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:26:01.144 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:26:01.144 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:26:01.145 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:26:01.146 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:26:01.905 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:26:02.098 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:26:02.352 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:26:02.493 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:26:02.998 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:26:03.048 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 20.742 seconds (JVM running for 32.17)
+2019-05-06 16:26:04.451 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:26:04.572 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:26:04.573 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:26:04.575 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:30:35.782 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:30:35.818 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:30:35.828 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:30:36.152 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:30:36.290 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:30:36.441 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71238fc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a54a73f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16a0ee18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d6f0054, org.springframework.test.context.support.DirtiesContextTestExecutionListener@505fc5a4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fbdfdcf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4efc180e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3bf9ce3e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16610890]
+2019-05-06 16:30:37.252 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:30:37.271 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2563 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:30:37.271 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:30:37.272 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:30:39.122 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:30:39.123 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:30:39.123 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:30:39.171 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:30:39.177 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:30:39.223 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2019-05-06 16:30:39.898 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$3a921bc0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:30:39.917 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44996f59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:30:39.989 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:30:40.287 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:30:42.220 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:30:42.970 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:30:43.195 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:30:43.196 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:30:43.197 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:30:43.197 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:30:43.569 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:30:43.706 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:30:43.743 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:30:43.824 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:30:44.044 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:30:44.076 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 7.392 seconds (JVM running for 9.875)
+2019-05-06 16:30:44.531 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:30:44.637 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:30:44.637 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:30:44.639 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:32:43.103 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:32:43.127 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:32:43.142 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:32:43.543 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:32:43.729 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:32:43.759 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 16:32:44.312 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:32:44.364 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2571 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:32:44.365 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:32:44.366 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:32:45.969 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:32:45.969 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:32:45.969 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:32:45.970 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:32:46.018 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:32:46.020 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:32:46.056 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-05-06 16:32:46.546 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$71a6f47c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:32:46.558 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7bae4815] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:32:46.632 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:32:46.939 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:32:48.892 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:32:49.603 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:32:49.822 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:32:49.825 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:32:49.826 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:32:49.826 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:32:50.265 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:32:50.359 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:32:50.390 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:32:50.429 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:32:50.621 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:32:50.661 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.716 seconds (JVM running for 9.755)
+2019-05-06 16:32:51.123 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:32:51.212 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:32:51.212 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:32:51.214 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:40:09.275 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:40:09.330 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:40:09.333 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:40:10.466 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:40:11.855 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:40:12.035 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 16:40:13.513 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:40:13.548 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2585 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:40:13.548 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:40:13.549 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:40:18.076 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:40:18.077 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:40:18.077 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:40:18.077 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:40:18.259 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:40:18.263 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:40:18.346 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 36ms. Found 0 repository interfaces.
+2019-05-06 16:40:19.657 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$caeb1799] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:40:19.669 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4f26b32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:40:19.785 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:40:20.131 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:40:23.488 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:40:24.571 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:40:25.051 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:40:25.052 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:40:25.053 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:40:25.053 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:40:25.632 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:40:25.818 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:40:25.924 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:40:26.057 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:40:26.499 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:40:26.559 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 14.289 seconds (JVM running for 21.901)
+2019-05-06 16:40:27.572 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:40:27.659 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:40:27.661 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:40:27.662 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:42:28.814 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:42:28.847 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:42:28.872 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:42:29.189 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:42:29.331 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:42:29.372 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71238fc2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a54a73f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16a0ee18, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d6f0054, org.springframework.test.context.transaction.TransactionalTestExecutionListener@505fc5a4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5fbdfdcf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3bf9ce3e]
+2019-05-06 16:42:30.064 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:42:30.126 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2593 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:42:30.127 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:42:30.128 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:42:32.636 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:42:32.636 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:42:32.636 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:42:32.637 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:42:32.683 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:42:32.686 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:42:32.730 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 22ms. Found 0 repository interfaces.
+2019-05-06 16:42:33.295 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$bfb053e2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:42:33.306 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c9b7a77b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:42:33.365 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:42:33.613 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:42:35.681 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:42:36.378 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:42:36.589 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:42:36.590 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:42:36.590 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:42:36.591 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:42:36.987 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:42:37.095 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:42:37.128 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:42:37.179 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:42:37.467 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:42:37.511 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 7.894 seconds (JVM running for 10.18)
+2019-05-06 16:42:37.950 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:42:38.045 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:42:38.046 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:42:38.048 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:49:58.117 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:49:58.148 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:49:58.165 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:49:58.407 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:49:58.532 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:49:58.553 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71238fc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a54a73f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16a0ee18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d6f0054, org.springframework.test.context.support.DirtiesContextTestExecutionListener@505fc5a4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fbdfdcf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4efc180e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3bf9ce3e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16610890]
+2019-05-06 16:49:58.957 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:49:58.984 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2615 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:49:58.985 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:49:58.985 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:50:00.228 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:50:00.228 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:50:00.229 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:50:00.229 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:50:00.270 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:50:00.273 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:50:00.312 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 23ms. Found 0 repository interfaces.
+2019-05-06 16:50:00.866 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$caeb1799] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:50:00.879 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4f26b32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:50:00.977 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:50:01.234 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:50:03.015 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:50:03.630 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:50:03.844 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:50:03.845 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:50:03.845 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:50:03.846 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:50:04.205 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:50:04.310 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:50:04.342 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:50:04.392 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:50:04.685 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:50:04.720 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.092 seconds (JVM running for 8.052)
+2019-05-06 16:50:05.143 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:50:05.177 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:50:05.178 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:50:05.181 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:54:25.754 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:54:25.786 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:54:25.790 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:54:25.971 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:54:26.096 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:54:26.113 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71238fc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a54a73f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16a0ee18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d6f0054, org.springframework.test.context.support.DirtiesContextTestExecutionListener@505fc5a4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fbdfdcf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4efc180e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3bf9ce3e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16610890]
+2019-05-06 16:54:26.486 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:54:26.507 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2629 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:54:26.507 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:54:26.508 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:54:27.726 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:54:27.726 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:54:27.726 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:54:27.727 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:54:27.767 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:54:27.771 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:54:27.813 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 25ms. Found 0 repository interfaces.
+2019-05-06 16:54:28.377 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$caeb1799] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:54:28.388 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d4f26b32] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:54:28.441 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:54:28.771 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:54:30.565 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:54:31.515 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:54:31.791 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:54:31.793 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:54:31.794 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:54:31.794 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:54:32.177 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:54:32.287 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:54:32.319 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:54:32.367 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:54:32.589 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:54:32.621 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.424 seconds (JVM running for 8.27)
+2019-05-06 16:54:33.060 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:54:33.141 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:54:33.142 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:54:33.145 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 16:57:34.191 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 16:57:34.264 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 16:57:34.274 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 16:57:35.449 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 16:57:35.833 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 16:57:35.935 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 16:57:37.896 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 16:57:37.987 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2635 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 16:57:37.988 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 16:57:37.988 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 16:57:42.303 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:57:42.308 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:57:42.308 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 16:57:42.308 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 16:57:42.501 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 16:57:42.505 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 16:57:42.584 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 35ms. Found 0 repository interfaces.
+2019-05-06 16:57:43.932 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$d9420ae9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:57:43.945 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e3495e82] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:57:44.046 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:57:44.412 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 16:57:47.964 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 16:57:48.912 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:57:50.067 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 16:57:50.068 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 16:57:50.069 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 16:57:50.070 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 16:57:50.671 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 16:57:50.834 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 16:57:50.973 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 16:57:51.109 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 16:57:51.575 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 16:57:51.630 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 15.55 seconds (JVM running for 22.315)
+2019-05-06 16:57:52.856 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 16:57:52.963 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 16:57:52.964 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 16:57:52.971 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 17:00:51.945 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 17:00:51.956 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 17:00:51.960 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 17:00:52.170 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 17:00:52.295 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 17:00:52.321 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@71238fc2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a54a73f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@16a0ee18, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3d6f0054, org.springframework.test.context.support.DirtiesContextTestExecutionListener@505fc5a4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5fbdfdcf, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4efc180e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3bf9ce3e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@16610890]
+2019-05-06 17:00:52.699 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 17:00:52.742 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 2653 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 17:00:52.742 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 17:00:52.755 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 17:00:54.030 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 17:00:54.031 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 17:00:54.031 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 17:00:54.031 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 17:00:54.070 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 17:00:54.073 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 17:00:54.106 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-05-06 17:00:54.619 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$e268d3a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 17:00:54.632 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec702740] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 17:00:54.684 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 17:00:54.936 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 17:00:56.699 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 17:00:57.274 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 17:00:57.528 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 17:00:57.530 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 17:00:57.530 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 17:00:57.531 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 17:00:57.962 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 17:00:58.076 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 17:00:58.112 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 17:00:58.159 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 17:00:58.412 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 17:00:58.456 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.059 seconds (JVM running for 7.927)
+2019-05-06 17:00:58.967 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 17:00:59.077 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 17:00:59.079 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 17:00:59.081 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 18:34:55.857 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 18:34:55.903 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 18:34:55.907 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 18:34:56.792 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 18:34:57.571 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 18:34:57.893 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@71238fc2, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2a54a73f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@16a0ee18, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d6f0054, org.springframework.test.context.transaction.TransactionalTestExecutionListener@505fc5a4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5fbdfdcf, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@bd4dc25, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@25084a1e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@156b88f5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3bf9ce3e]
+2019-05-06 18:35:00.302 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 18:35:00.362 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 1019 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 18:35:00.362 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 18:35:00.363 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 18:35:04.202 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:35:04.203 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:35:04.203 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:35:04.203 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 18:35:04.395 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 18:35:04.398 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 18:35:04.467 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-05-06 18:35:05.387 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$e268d3a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:35:05.397 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ec702740] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:35:05.511 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:35:05.843 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:35:08.896 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 18:35:09.759 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 18:35:10.105 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 18:35:10.106 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 18:35:10.107 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 18:35:10.107 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 18:35:10.645 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 18:35:10.731 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 18:35:10.860 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 18:35:10.983 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 18:35:11.365 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 18:35:11.399 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 12.894 seconds (JVM running for 19.646)
+2019-05-06 18:35:12.686 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 18:35:12.818 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 18:35:12.819 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 18:35:12.822 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
+2019-05-06 18:37:07.203 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 308 ] - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.yangzhongli.sp.service.ContestantServiceTests], using SpringBootContextLoader
+2019-05-06 18:37:07.247 - [ INFO  ] [ o.s.test.context.support.AbstractContextLoader : 264 ] - Could not detect default resource locations for test class [com.yangzhongli.sp.service.ContestantServiceTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-05-06 18:37:07.268 - [ INFO  ] [ o.s.t.c.support.AnnotationConfigContextLoaderUtils : 83 ] - Could not detect default configuration classes for test class [com.yangzhongli.sp.service.ContestantServiceTests]: ContestantServiceTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-05-06 18:37:07.523 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 247 ] - Found @SpringBootConfiguration com.yangzhongli.sp.WebApplication for test class com.yangzhongli.sp.service.ContestantServiceTests
+2019-05-06 18:37:07.648 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 248 ] - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-05-06 18:37:07.708 - [ INFO  ] [ o.s.b.t.context.SpringBootTestContextBootstrapper : 177 ] - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@67c33749, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@fba92d3, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@662b4c69, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@fa49800, org.springframework.test.context.support.DirtiesContextTestExecutionListener@71238fc2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2a54a73f, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@16a0ee18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3d6f0054, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@505fc5a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5fbdfdcf, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4efc180e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@bd4dc25]
+2019-05-06 18:37:08.104 - [ WARN  ] [ o.s.b.t.j.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer : 86 ] - 
+
+Found multiple occurrences of org.json.JSONObject on the class path:
+
+	jar:file:/Users/ydm12/.m2/repository/org/json/json/20170516/json-20170516.jar!/org/json/JSONObject.class
+	jar:file:/Users/ydm12/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar!/org/json/JSONObject.class
+
+You may wish to exclude one of them to ensure predictable runtime behavior
+
+2019-05-06 18:37:08.122 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 50 ] - Starting ContestantServiceTests on YDM-9.local with PID 1029 (started by ydm12 in /Users/ydm12/ideaProjects/newBeauty/sp-web)
+2019-05-06 18:37:08.122 - [ DEBUG ] [ com.yangzhongli.sp.service.ContestantServiceTests : 53 ] - Running with Spring Boot v2.1.1.RELEASE, Spring v5.1.3.RELEASE
+2019-05-06 18:37:08.123 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 675 ] - No active profile set, falling back to default profiles: default
+2019-05-06 18:37:09.614 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'contestantMapper' and 'com.yangzhongli.sp.dao.instance.ContestantMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:37:09.712 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'likesRecordMapper' and 'com.yangzhongli.sp.dao.instance.LikesRecordMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:37:09.712 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 239 ] - Skipping MapperFactoryBean with name 'wechatUserMapper' and 'com.yangzhongli.sp.dao.instance.WechatUserMapper' mapperInterface. Bean already defined with the same name!
+2019-05-06 18:37:09.713 - [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 166 ] - No MyBatis mapper was found in '[com.yangzhongli.sp]' package. Please check your configuration.
+2019-05-06 18:37:09.743 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 244 ] - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-05-06 18:37:09.746 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 126 ] - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-05-06 18:37:09.777 - [ INFO  ] [ o.s.d.r.config.RepositoryConfigurationDelegate : 182 ] - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-05-06 18:37:10.445 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'shiroConfiguration' of type [com.yangzhongli.sp.config.shiro.ShiroConfiguration$$EnhancerBySpringCGLIB$$55bdcbf0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:37:10.454 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5fc51f89] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:37:10.500 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'userRealm' of type [com.yangzhongli.sp.config.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:37:10.753 - [ INFO  ] [ o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker : 330 ] - Bean 'defaultWebSecurityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-05-06 18:37:12.725 - [ INFO  ] [ s.d.s.w.PropertySourcedRequestMappingHandlerMapping : 69 ] - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-05-06 18:37:13.252 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 171 ] - Initializing ExecutorService 'applicationTaskExecutor'
+2019-05-06 18:37:13.457 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-05-06 18:37:13.458 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-05-06 18:37:13.459 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 60 ] - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-05-06 18:37:13.459 - [ INFO  ] [ t.mybatis.mapper.autoconfigure.MapperCacheDisabler : 83 ] - Clear EntityHelper entityTableMap cache.
+2019-05-06 18:37:13.767 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 171 ] - Initializing ExecutorService 'taskScheduler'
+2019-05-06 18:37:13.846 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 160 ] - Context refreshed
+2019-05-06 18:37:13.869 - [ INFO  ] [ s.d.s.web.plugins.DocumentationPluginsBootstrapper : 163 ] - Found 1 custom documentation plugin(s)
+2019-05-06 18:37:13.901 - [ INFO  ] [ s.d.spring.web.scanners.ApiListingReferenceScanner : 41 ] - Scanning for api listing references
+2019-05-06 18:37:14.046 - [ INFO  ] [ s.d.s.w.r.operation.CachingOperationNameGenerator : 40 ] - Generating unique operation named: microAppLoginUsingPOST_1
+2019-05-06 18:37:14.074 - [ INFO  ] [ com.yangzhongli.sp.service.ContestantServiceTests : 59 ] - Started ContestantServiceTests in 6.237 seconds (JVM running for 9.375)
+2019-05-06 18:37:14.438 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 655 ] - {dataSource-1} inited
+2019-05-06 18:37:14.537 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskScheduler : 208 ] - Shutting down ExecutorService 'taskScheduler'
+2019-05-06 18:37:14.537 - [ INFO  ] [ o.s.scheduling.concurrent.ThreadPoolTaskExecutor : 208 ] - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-06 18:37:14.539 - [ INFO  ] [ com.alibaba.druid.pool.DruidDataSource : 1370 ] - {dataSource-1} closed
