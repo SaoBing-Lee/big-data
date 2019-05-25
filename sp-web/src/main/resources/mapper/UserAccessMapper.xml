@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.UserAccessMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.UserAccess">
+    <id column="id" jdbcType="INTEGER" property="id" />
+      <result column="app_id" jdbcType="VARCHAR" property="appId" />
+      <result column="visits" jdbcType="VARCHAR" property="visits" />
+      <result column="opens" jdbcType="VARCHAR" property="opens" />
+      <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+      <result column="user_num" jdbcType="VARCHAR" property="userNum" />
+  </resultMap>
+  <!--根据appId查询访问总表对应数据-->
+  <select id="get" resultType="com.yangzhongli.sp.dao.po.UserAccess" parameterType="java.lang.String">
+   SELECT
+      id,
+      app_id AS appId,
+      visits,
+      opens,
+      access_person AS accessPerson,
+      user_num AS userNum
+  FROM
+      user_access
+  WHERE
+      app_id = #{appId}
+  </select>
+</mapper>

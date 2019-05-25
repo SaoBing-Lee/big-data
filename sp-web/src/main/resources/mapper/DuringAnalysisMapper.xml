@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.DuringAnalysisMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.DuringAnalysis">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="app_id" jdbcType="VARCHAR" property="appId" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="time" jdbcType="VARCHAR" property="time" />
+    <result column="visits" jdbcType="VARCHAR" property="visits" />
+    <result column="opens" jdbcType="VARCHAR" property="opens" />
+    <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+    <result column="new_person" jdbcType="VARCHAR" property="newPerson" />
+    <result column="online_mean" jdbcType="VARCHAR" property="onlineMean" />
+  </resultMap>
+
+  <!--获取应用分析的 实时数据 的趋势图数据-->
+  <select id="selectDuringAnalysis" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DuringAnalysis">
+    SELECT
+        id,
+        app_id AS appId,
+        `date`,
+        `time`,
+        visits,
+        opens,
+        access_person AS accessPerson,
+        new_person AS newPerson,
+        online_mean AS onlineMean
+    FROM
+        during_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` IN (#{dateToday}, #{dateYesterday}, #{dateSevenDay} )
+        ORDER BY `date` desc,`time` asc
+
+  </select>
+
+
+  <!--根据时间动态 获取应用分析的 历史数据 的趋势图数据-->
+  <select id="selectHistoryDuring" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DuringAnalysis">
+    SELECT
+        id,
+        app_id AS appId,
+        `date`,
+        `time`,
+        visits,
+        opens,
+        access_person AS accessPerson,
+        new_person AS newPerson,
+        online_mean AS onlineMean
+    FROM
+        during_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` &gt; #{checkDay}
+        ORDER BY `time` asc
+
+  </select>
+</mapper>

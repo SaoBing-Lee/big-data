@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.RegionalAnalysisMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.RegionalAnalysis">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="app_id" jdbcType="VARCHAR" property="appId" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="province" jdbcType="VARCHAR" property="province" />
+    <result column="city" jdbcType="VARCHAR" property="city" />
+    <result column="py_province" jdbcType="VARCHAR" property="pyProvince" />
+    <result column="py_city" jdbcType="VARCHAR" property="pyCity" />
+    <result column="visits" jdbcType="VARCHAR" property="visits" />
+    <result column="opens" jdbcType="VARCHAR" property="opens" />
+    <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+    <result column="new_person" jdbcType="VARCHAR" property="newPerson" />
+  </resultMap>
+
+
+</mapper>

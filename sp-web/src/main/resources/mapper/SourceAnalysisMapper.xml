@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.SourceAnalysisMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.SourceAnalysis">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="app_id" jdbcType="VARCHAR" property="appId" />
+    <result column="scenario_id" jdbcType="VARCHAR" property="scenarioId" />
+    <result column="scenario_name" jdbcType="VARCHAR" property="scenarioName" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="visits" jdbcType="VARCHAR" property="visits" />
+    <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+    <result column="visits_acc" jdbcType="VARCHAR" property="visitsAcc" />
+    <result column="access_person_acc" jdbcType="VARCHAR" property="accessPersonAcc" />
+  </resultMap>
+
+
+</mapper>

@@ -21,7 +21,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan("com.yangzhongli.sp.dao.instance")
 @EnableSwagger2
 @EnableScheduling
-@ServletComponentScan
 public class WebApplication {
 
     public static void main(String[] args) {

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yangzhongli.sp.dao.instance.DayAnalysisMapper">
+  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.DayAnalysis">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="app_id" jdbcType="VARCHAR" property="appId" />
+    <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="visits" jdbcType="VARCHAR" property="visits" />
+    <result column="opens" jdbcType="VARCHAR" property="opens" />
+    <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+    <result column="new_person" jdbcType="VARCHAR" property="newPerson" />
+    <result column="online_mean" jdbcType="VARCHAR" property="onlineMean" />
+  </resultMap>
+
+
+  <!--获取应用分析的 历史数据 的详细数据-->
+  <select id="selectDayList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DayAnalysis">
+    SELECT
+        id,
+        app_id AS appId,
+        `date`,
+        visits,
+        opens,
+        access_person AS accessPerson,
+        new_person AS newPerson,
+        online_mean AS onlineMean
+    FROM
+        during_analysis
+    WHERE
+        app_id = #{appId}
+        ORDER BY `date` desc
+
+  </select>
+
+</mapper>

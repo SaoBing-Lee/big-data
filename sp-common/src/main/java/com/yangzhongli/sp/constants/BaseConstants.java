@@ -19,5 +19,9 @@ public interface BaseConstants {
      */
     String LOGIN_USER = "login_user";
 
+    /**
+     *登陆用户权限信息
+     */
+    String LOGIN_USER_ROLE = "login_user_role";
 
 }
