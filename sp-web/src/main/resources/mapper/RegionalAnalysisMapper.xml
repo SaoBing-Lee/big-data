@@ -1,19 +1,174 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yangzhongli.sp.dao.instance.RegionalAnalysisMapper">
-  <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.RegionalAnalysis">
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="app_id" jdbcType="VARCHAR" property="appId" />
-    <result column="date" jdbcType="VARCHAR" property="date" />
-    <result column="province" jdbcType="VARCHAR" property="province" />
-    <result column="city" jdbcType="VARCHAR" property="city" />
-    <result column="py_province" jdbcType="VARCHAR" property="pyProvince" />
-    <result column="py_city" jdbcType="VARCHAR" property="pyCity" />
-    <result column="visits" jdbcType="VARCHAR" property="visits" />
-    <result column="opens" jdbcType="VARCHAR" property="opens" />
-    <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
-    <result column="new_person" jdbcType="VARCHAR" property="newPerson" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.yangzhongli.sp.dao.po.RegionalAnalysis">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="app_id" jdbcType="VARCHAR" property="appId"/>
+        <result column="date" jdbcType="VARCHAR" property="date"/>
+        <result column="province" jdbcType="VARCHAR" property="province"/>
+        <result column="city" jdbcType="VARCHAR" property="city"/>
+        <result column="py_province" jdbcType="VARCHAR" property="pyProvince"/>
+        <result column="py_city" jdbcType="VARCHAR" property="pyCity"/>
+        <result column="visits" jdbcType="VARCHAR" property="visits"/>
+        <result column="opens" jdbcType="VARCHAR" property="opens"/>
+        <result column="access_person" jdbcType="VARCHAR" property="accessPerson"/>
+        <result column="new_person" jdbcType="VARCHAR" property="newPerson"/>
+    </resultMap>
 
+
+    <!--  根据应用id和日期 获取地图信息的  访问次数 -->
+    <select id="selectProvinceAmountVisits" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        province,
+        sum( visits ) AS amountVisits
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        province
+    ORDER BY
+        province DESC
+
+  </select>
+
+    <!--  根据应用id和日期 获取地图信息的 访问人数 -->
+    <select id="selectProvinceAmountAccessPerson" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        province,
+        SUM( access_person ) AS amountAccessPerson
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        province
+    ORDER BY
+        province DESC
+
+  </select>
+
+    <!--  根据应用id和日期 获取地图信息的 打开次数 -->
+    <select id="selectProvinceAmountOpens" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        province,
+        sum( opens ) AS amountOpens
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        province
+    ORDER BY
+        province DESC
+
+  </select>
+
+    <!--  根据应用id和日期 获取地图信息的  新增人数 -->
+    <select id="selectProvinceAmountNewPerson" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        province,
+        sum( new_person ) AS amountNewPerson
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        province
+    ORDER BY
+        province DESC
+
+  </select>
+
+
+    <!--  根据应用id和日期 获取省份列表和地图数据 -->
+    <select id="selectProvinceList" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        province,
+        sum( visits ) AS amountVisits,
+        sum( opens ) AS amountOpens,
+        SUM( access_person ) AS amountAccessPerson,
+        sum( new_person ) AS amountNewPerson
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        province
+    ORDER BY
+        province DESC
+
+  </select>
+
+    <!--  根据应用id、日期、省份名字，查询当前省的各市数据 -->
+    <select id="selectCityList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+    SELECT
+        city,
+        sum( visits ) AS amountVisits,
+        sum( opens ) AS amountOpens,
+        SUM( access_person ) AS amountAccessPerson,
+        sum( new_person ) AS amountNewPerson
+    FROM
+        regional_analysis
+    WHERE
+        app_id = #{appId}
+        and province=#{province}
+        AND `date` BETWEEN #{strDate}AND #{endDate}
+    GROUP BY
+        city
+    ORDER BY
+        city DESC
+
+  </select>
+
+    <!-- 根据应用id、时间段、省份名字，查询当前省 省份详细信息  -->
+    <select id="selectProvinceDetailList" parameterType="java.lang.String"
+            resultType="com.yangzhongli.sp.dao.dto.ProvinceDTO">
+        SELECT
+            `date`,
+            sum( visits ) AS amountVisits,
+            sum( opens ) AS amountOpens,
+            SUM( access_person ) AS amountAccessPerson,
+            sum( new_person ) AS amountNewPerson
+        FROM
+              regional_analysis
+        WHERE
+              app_id = #{appId}
+          and province =#{province}
+          and `date`BETWEEN #{strDate}AND #{endDate}
+        GROUP BY `date`
+        ORDER BY
+        `date` DESC
+
+    </select>
+
+    <!--  根据应用id、时间段、市名字，查询当前省 市详情数据列表-->
+    <select id="selectCityDetailList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.RegionalAnalysis">
+    	SELECT
+            city,
+            date,
+            visits,opens,
+            new_person AS newPerson,
+            access_person AS accessPerson
+        FROM
+            regional_analysis
+        WHERE
+            app_id = #{appId}
+            and city =#{city}
+            and	`date`BETWEEN #{strDate}AND #{endDate}
+        ORDER BY
+            `date` DESC
+
+  </select>
 
 </mapper>

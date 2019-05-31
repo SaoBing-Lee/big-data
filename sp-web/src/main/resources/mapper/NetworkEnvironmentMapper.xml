@@ -16,5 +16,64 @@
     <result column="new_person_acc" jdbcType="VARCHAR" property="newPersonAcc" />
   </resultMap>
 
+  <!--  根据应用id、时间段，查询应用网络环境 趋势图和列表-->
+  <select id="selectNetwork" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.dto.NetworkDTO">
+    SELECT
+      network,
+      sum( visits ) AS amountVisits,
+      sum( opens ) AS amountOpens,
+      SUM( access_person ) AS amountAccessPerson,
+      sum(new_person) as amountNewPerson
+  FROM
+      network_environment
+  WHERE
+      app_id = #{appId}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+      GROUP BY network
+  ORDER BY
+      network DESC
+
+  </select>
+
+
+  <!--  根据应用id、时间段，查询应用网络环境详细信息 趋势图-->
+  <select id="selectNetworkDetail" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.NetworkEnvironment">
+    SELECT
+      `date`,
+      network,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      network_environment
+  WHERE
+      app_id = #{appId}
+      AND `network` = #{network}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date`
+
+  </select>
+
+  <!--  根据应用id、时间段，查询应用网络环境详细信息 列表-->
+  <select id="selectNetworkDetailList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.NetworkEnvironment">
+    SELECT
+      `date`,
+      network,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      network_environment
+  WHERE
+      app_id = #{appId}
+      AND `network` = #{network}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date` DESC
+
+  </select>
 
 </mapper>

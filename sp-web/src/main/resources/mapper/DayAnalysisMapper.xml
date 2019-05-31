@@ -12,7 +12,25 @@
     <result column="online_mean" jdbcType="VARCHAR" property="onlineMean" />
   </resultMap>
 
+    <!--获取应用分析的 历史数据 的趋势图-->
+    <select id="selectDay" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DayAnalysis">
+    SELECT
+        id,
+        app_id AS appId,
+        `date`,
+        visits,
+        opens,
+        access_person AS accessPerson,
+        new_person AS newPerson,
+        online_mean AS onlineMean
+    FROM
+        day_analysis
+    WHERE
+            app_id = #{appId}
+        AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+        ORDER BY `date`
 
+  </select>
   <!--获取应用分析的 历史数据 的详细数据-->
   <select id="selectDayList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DayAnalysis">
     SELECT
@@ -25,9 +43,10 @@
         new_person AS newPerson,
         online_mean AS onlineMean
     FROM
-        during_analysis
+        day_analysis
     WHERE
-        app_id = #{appId}
+            app_id = #{appId}
+        AND ( `date`BETWEEN #{strDate}AND #{endDate} )
         ORDER BY `date` desc
 
   </select>

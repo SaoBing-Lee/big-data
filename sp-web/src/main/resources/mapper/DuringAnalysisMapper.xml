@@ -35,6 +35,25 @@
   </select>
 
 
+    <!--根据时间 获取应用分析的 实时数据 的详细数据-->
+    <select id="selectDuringAnalysisDetail" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DuringAnalysis">
+    SELECT
+        id,
+        app_id AS appId,
+        `date`,
+        `time`,
+        visits,
+        opens,
+        access_person AS accessPerson,
+        new_person AS newPerson,
+        online_mean AS onlineMean
+    FROM
+      during_analysis
+    WHERE
+        app_id = #{appId}
+        AND `date`=#{checkDay}
+    ORDER BY `time` asc
+ </select>
   <!--根据时间动态 获取应用分析的 历史数据 的趋势图数据-->
   <select id="selectHistoryDuring" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DuringAnalysis">
     SELECT
@@ -51,7 +70,7 @@
         during_analysis
     WHERE
         app_id = #{appId}
-        AND `date` &gt; #{checkDay}
+        AND `date`BETWEEN #{strDate}AND #{endDate}
         ORDER BY `time` asc
 
   </select>

@@ -8,6 +8,11 @@
       <result column="opens" jdbcType="VARCHAR" property="opens" />
       <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
       <result column="user_num" jdbcType="VARCHAR" property="userNum" />
+      <result column="new_visits" jdbcType="VARCHAR" property="newVisits" />
+      <result column="new_opens" jdbcType="VARCHAR" property="newOpens" />
+      <result column="new_access_person" jdbcType="VARCHAR" property="newAccessPerson" />
+      <result column="new_user_num" jdbcType="VARCHAR" property="newUserNum" />
+
   </resultMap>
   <!--根据appId查询访问总表对应数据-->
   <select id="get" resultType="com.yangzhongli.sp.dao.po.UserAccess" parameterType="java.lang.String">
@@ -17,7 +22,11 @@
       visits,
       opens,
       access_person AS accessPerson,
-      user_num AS userNum
+      user_num AS userNum,
+      new_visits as newVisits,
+      new_opens as newOpens,
+      new_access_person as newAccessPerson,
+      new_user_num as newUserNum
   FROM
       user_access
   WHERE

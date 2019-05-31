@@ -2,7 +2,6 @@ package com.yangzhongli.sp.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.github.pagehelper.StringUtil;
 import com.yangzhongli.sp.dao.instance.UserAppRoleMapper;
 import com.yangzhongli.sp.dao.instance.UserMapper;
 import com.yangzhongli.sp.dao.po.User;
@@ -19,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.StringUtils;
 
 import java.util.Date;
 import java.util.List;
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserVO getUserById(String id) {
         User user = userMapper.selectByPrimaryKey(id);
-        return ConverterUtil.convert(UserVO.class,user);
+        return ConverterUtil.convert(UserVO.class, user);
     }
 
     @Override
@@ -69,12 +69,14 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public String userLogin(String name, String password) {
+    public UserVO userLogin(String name, String password) {
         String passwordMd5 = null;
-        if (StringUtil.isNotEmpty(password)) {
+        if (!StringUtils.isEmpty(password)) {
             passwordMd5 = MD5Util.getMD5(password, true, 16);
         }
-        return userMapper.userLogin(name, passwordMd5);
+        User u = userMapper.userLogin(name, passwordMd5);
+        log.info("=========user:"+u);
+        return ConverterUtil.convert(UserVO.class, u);
     }
 
     @Override
@@ -97,7 +99,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void update(List<UserAppRoleVO> list) {
         UserAppRole userAppRole = new UserAppRole();
-        if(!CollectionUtils.isEmpty(list)){
+        if (!CollectionUtils.isEmpty(list)) {
             userAppRole.setUserId(list.get(0).getUserId());
             int delCount = userAppRoleMapper.delete(userAppRole);
             if (delCount > 0) {
@@ -111,7 +113,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public int delUser(String[] ids) {
         UserAppRole userAppRole = new UserAppRole();
-        for (int i=0;i<ids.length;i++){
+        for (int i = 0; i < ids.length; i++) {
             userAppRole.setUserId(ids[i]);
             userAppRoleMapper.delete(userAppRole);
         }
@@ -121,10 +123,17 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean nameIsNot(String name) {
         int nameCount = userMapper.nameIsNot(name);
-        if(nameCount>0){
+        if (nameCount > 0) {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public int getUserRoleCount(String userId) {
+        UserAppRole userAppRole = new UserAppRole();
+        userAppRole.setUserId(userId);
+        return userAppRoleMapper.selectCount(userAppRole);
     }
 
 

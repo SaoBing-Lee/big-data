@@ -29,7 +29,8 @@
     SELECT
       ar.id,
       ar.`name`,
-      ar.picture
+      ar.picture,
+      ar.app_id as appId
   FROM
       app_role AS ar
       LEFT JOIN user_app_role AS uar ON ar.id = uar.app_role_id

@@ -5,10 +5,68 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="app_id" jdbcType="VARCHAR" property="appId" />
     <result column="date" jdbcType="VARCHAR" property="date" />
+    <result column="system" jdbcType="VARCHAR" property="system" />
     <result column="visits" jdbcType="VARCHAR" property="visits" />
     <result column="opens" jdbcType="VARCHAR" property="opens" />
     <result column="access_person" jdbcType="VARCHAR" property="accessPerson" />
+    <result column="new_person" jdbcType="VARCHAR" property="newPerson" />
   </resultMap>
 
+  <!--  根据应用id、时间段,统计分析终端-->
+  <select id="selectSystemList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.dto.SystemDTO">
+     SELECT
+      `system`,
+      sum( visits ) AS amountVisits,
+      sum( opens ) AS amountOpens,
+      SUM( access_person ) AS amountAccessPerson
+  FROM
+      user_system
+  WHERE
+      app_id = #{appId}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate})
+  GROUP BY
+      `system`
+  ORDER BY
+      `system` DESC
 
+  </select>
+
+
+  <!--  根据应用id、系统名称、时间段,统计分析终端详细信息 趋势图-->
+  <select id="selectSystemDetail" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.UserSystem">
+    SELECT
+      `date`,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      user_system
+  WHERE
+      app_id = #{appId}
+      AND `system` = #{systemPhone}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date`
+
+  </select>
+
+  <!--  根据应用id、系统名称、时间段,统计分析终端详细信息 列表-->
+  <select id="selectSystemDetailList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.UserSystem">
+    SELECT
+      `date`,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      user_system
+  WHERE
+      app_id = #{appId}
+      AND `system` = #{systemPhone}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date` DESC
+
+  </select>
 </mapper>

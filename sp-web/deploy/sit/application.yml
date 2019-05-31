@@ -1,7 +1,7 @@
 server:
   port: 8084  # 测试服务
   session:
-    timeout: 60*60*24  #session 过期时间一天 单位秒
+    timeout: 60*10  #60*60*24  #session 过期时间一天 单位秒
 
 spring:
   #设置图片上传大小

@@ -43,4 +43,5 @@ public interface AppRoleService {
      * @return
      */
     List<AppRoleVO> getUserRoleList( String userId);
+
 }

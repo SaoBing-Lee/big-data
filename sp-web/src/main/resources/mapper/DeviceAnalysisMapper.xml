@@ -13,4 +13,63 @@
   </resultMap>
 
 
+  <!--  根据应用id、时间段，查询应用机型分析趋势图和列表-->
+  <select id="selectDevice" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.dto.NetworkDTO">
+    SELECT
+      device,
+      sum( visits ) AS amountVisits,
+      sum( opens ) AS amountOpens,
+      SUM( access_person ) AS amountAccessPerson,
+      sum(new_person) as amountNewPerson
+  FROM
+      device_analysis
+  WHERE
+      app_id = #{appId}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+      GROUP BY device
+  ORDER BY
+      device DESC
+
+  </select>
+
+
+  <!--  根据应用id、时间段，查询应用机型分析详细信息 趋势图-->
+  <select id="selectDeviceDetail" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DeviceAnalysis">
+    SELECT
+      `date`,
+      device,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      device_analysis
+  WHERE
+      app_id = #{appId}
+      AND `device` = #{device}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date`
+
+  </select>
+
+  <!--  根据应用id、时间段，查询应用机型分析详细信息 列表-->
+  <select id="selectDeviceDetailList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.DeviceAnalysis">
+    SELECT
+      `date`,
+      device,
+      visits,
+      new_person as newPerson,
+      access_person as accessPerson,
+      opens
+  FROM
+      device_analysis
+  WHERE
+      app_id = #{appId}
+      AND `device` = #{device}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+      `date` DESC
+
+  </select>
 </mapper>

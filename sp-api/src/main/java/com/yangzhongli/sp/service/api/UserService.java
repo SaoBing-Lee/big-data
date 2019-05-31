@@ -37,7 +37,7 @@ public interface UserService {
      * @param password
      * @return
      */
-    String userLogin(String name, String password);
+    UserVO userLogin(String name, String password);
 
     /**
      * 查询用户信息和用户权限
@@ -67,5 +67,12 @@ public interface UserService {
      * @return
      */
     boolean nameIsNot(String name);
+
+    /**
+     * 根据用户ID 查询用户的权限（小程序）数量--登陆时使用
+     * @param userId
+     * @return
+     */
+    int getUserRoleCount( String userId);
 
 }

@@ -12,6 +12,7 @@ import lombok.Data;
 @Data
 public class UserAccessVO {
 
+
     private String id;
     //应用ID
     private String appId;
@@ -23,5 +24,13 @@ public class UserAccessVO {
     private String accessPerson;
     //用户总数
     private String userNum;
+    //新增访问次数
+    private String newVisits;
+    //新增打开次数
+    private String newOpens;
+    //新增访问人数
+    private String newAccessPerson;
+    //新增用户数
+    private String newUserNum;
 
 }

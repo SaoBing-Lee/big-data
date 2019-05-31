@@ -14,4 +14,64 @@
   </resultMap>
 
 
+  <!--  根据应用id、时间段，查询应用自定义事件列表-->
+  <select id="selectEventAllList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.EventAll">
+
+ SELECT
+     id,
+     app_id as appId,
+     `date`,
+     event_id as eventId,
+     event_name as eventName,
+     event_type as eventType,
+     trigger_num as triggerNum,
+     trigger_person as triggerPerson,
+     visits_mean as visitsMean
+  FROM
+    event_all
+  WHERE
+      app_id = #{appId}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+    event_id
+
+
+  </select>
+
+  <!--  根据应用id、时间段，查询应用自定义事件详情趋势图-->
+  <select id="selectEventAllDetail" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.EventAll">
+
+ SELECT
+     `date`,
+     event_name as eventName,
+     trigger_num as triggerNum,
+     trigger_person as triggerPerson
+  FROM
+    event_all
+  WHERE
+          app_id = #{appId}
+      and id =#{id}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+    `date`
+  </select>
+
+
+  <!--  根据应用id、时间段，查询应用自定义事件详情数据列表-->
+  <select id="selectEventAllDetailList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.EventAll">
+
+ SELECT
+     `date`,
+     trigger_num as triggerNum,
+     trigger_person as triggerPerson,
+     visits_mean as visitsMean
+  FROM
+    event_all
+  WHERE
+          app_id = #{appId}
+      and id =#{id}
+      AND ( `date`BETWEEN #{strDate}AND #{endDate} )
+  ORDER BY
+    `date` desc
+  </select>
 </mapper>

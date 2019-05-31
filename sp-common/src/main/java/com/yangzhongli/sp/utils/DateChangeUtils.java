@@ -95,6 +95,19 @@ public class DateChangeUtils {
      * @param d
      * @return
      */
+    public static String changeDateStr(Date d) {
+        if (d == null) {
+            return null;
+        }
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        return formatter.format(d);
+    }
+    /**
+     * 时间转换为制定格式
+     *
+     * @param d
+     * @return
+     */
     public static String changeDateShow(Date d) {
         String newTime = null;
         if (d == null) {
@@ -232,6 +245,21 @@ public class DateChangeUtils {
         now.setTime(d);
         now.set(Calendar.DATE,now.get(Calendar.DATE)-day);
         return now.getTime();
+    }
+
+    /**
+     * 根据天数获取时间字符串
+     * @param day 天数
+     * @return
+     */
+    public static String getDateBeforeStr(int day){
+        String checkDay;
+        if (day == 0) {
+            checkDay =changeDateStr(new Date()); //今天的时间字符串
+        } else {
+            checkDay = changeDateStr(getDateBefore(new Date(), day)); //将时间转换成字符串
+        }
+        return checkDay;
     }
 
 }

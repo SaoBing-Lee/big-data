@@ -23,7 +23,7 @@ public interface UserMapper extends MyMapper<User> {
      *
      * @return
      */
-    String userLogin(@Param("userName") String userName, @Param("password") String password);
+    User userLogin(@Param("userName") String userName, @Param("password") String password);
 
     /**
      * 批量删除用户

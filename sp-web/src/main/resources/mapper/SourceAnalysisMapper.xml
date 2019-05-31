@@ -13,5 +13,57 @@
     <result column="access_person_acc" jdbcType="VARCHAR" property="accessPersonAcc" />
   </resultMap>
 
+  <!--  根据应用id、时间段，查询应用来源分析 趋势图的时间集合-->
+  <select id="selectSourceDateList" parameterType="java.lang.String" resultType="java.lang.String">
+
+    SELECT
+        `date`
+    FROM
+        source_analysis
+    WHERE
+        app_id = #{appId}
+        AND (`date`BETWEEN #{strDate}AND #{endDate})
+    GROUP BY `date`
+    ORDER BY
+        `date`
+
+  </select>
+  <!--  根据应用id、时间段，查询应用来源分析 趋势图的集合-->
+  <select id="selectSource" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.po.SourceAnalysis">
+
+    SELECT
+        a.scenario_name,
+        a.visits,
+        a.access_person
+    FROM
+        source_analysis AS a
+        LEFT JOIN source_management AS m ON a.scenario_id = m.scenario_id
+    WHERE
+        a.app_id = #{appId}
+        AND m.scenario_switch = 1
+        AND a.`date` = #{checkDay}
+    ORDER BY
+        a.scenario_id
+
+  </select>
+
+  <!--  根据应用id、时间段，查询应用来源分析 列表-->
+  <select id="selectSourceList" parameterType="java.lang.String" resultType="com.yangzhongli.sp.dao.dto.SourceDTO">
+    SELECT
+          a.scenario_id as scenarioId,
+          a.scenario_name as scenarioName,
+          sum( a.visits ) AS amountVisits,
+          SUM( a.access_person ) AS amountAccessPerson
+      FROM
+         source_analysis AS a
+            LEFT JOIN source_management AS m ON a.scenario_id = m.scenario_id
+      WHERE
+          a.app_id = #{appId}
+                AND m.scenario_switch = 1
+          AND ( a.`date`BETWEEN #{strDate}AND #{endDate})
+          GROUP BY a.scenario_id,a.scenario_name
+      ORDER BY
+          a.scenario_id
+  </select>
 
 </mapper>

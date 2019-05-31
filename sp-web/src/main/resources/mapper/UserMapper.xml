@@ -46,13 +46,15 @@
     </select>
 
     <!--用户登陆验证user-->
-    <select id="userLogin" resultType="java.lang.String" parameterType="java.lang.String">
+    <select id="userLogin" resultType="com.yangzhongli.sp.dao.po.User" parameterType="java.lang.String">
     SELECT
-    id
+        id,
+        `name`,
+        `type`
     FROM
-    `user`
+      `user`
     WHERE
-    `name` = #{userName}
+        `name` = #{userName}
     AND PASSWORD = #{password}
     </select>
 </mapper>

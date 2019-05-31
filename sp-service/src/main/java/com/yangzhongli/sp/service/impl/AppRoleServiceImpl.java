@@ -57,4 +57,5 @@ public class AppRoleServiceImpl implements AppRoleService {
         List<AppRole> list = appRoleMapper.getUserRoleList(userId);
         return ConverterUtil.convert(AppRoleVO.class,list);
     }
+
 }

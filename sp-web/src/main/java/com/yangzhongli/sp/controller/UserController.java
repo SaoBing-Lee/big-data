@@ -6,6 +6,7 @@ import com.yangzhongli.sp.constants.JsonResult;
 import com.yangzhongli.sp.service.api.AppRoleService;
 import com.yangzhongli.sp.service.api.UserService;
 import com.yangzhongli.sp.service.bo.*;
+import com.yangzhongli.sp.utils.IdUtils;
 import com.yangzhongli.sp.utils.MD5Util;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
@@ -13,15 +14,18 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Controller
-@RequestMapping("/bigData/weChatUser")
+@RequestMapping("/bigData/user")
 @Slf4j
 public class UserController {
 
@@ -31,14 +35,16 @@ public class UserController {
     @Autowired
     private AppRoleService appRoleService;
 
+    @CrossOrigin
     @ApiOperation(value = "添加权限")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "userName", value = "用户名"),
-            @ApiImplicitParam(name = "password", value = "密码")
+            @ApiImplicitParam(name = "name", value = "用户名"),
+            @ApiImplicitParam(name = "picture", value = "图标"),
+            @ApiImplicitParam(name = "appId", value = "应用ID")
     })
     @PostMapping(value = "saveAppRole")
     @ResponseBody
-    @LoginRequired
+    //@LoginRequired
     public JsonResult saveAppRole(@RequestBody AppRoleVO appRoleVO) {
         try {
             return JsonResult.ok(appRoleService.save(appRoleVO));
@@ -48,7 +54,8 @@ public class UserController {
         return JsonResult.defFail("添加小程序失败！");
     }
 
-    @LoginRequired
+    @CrossOrigin
+    //@LoginRequired
     @ApiOperation(value = "批量删除小程序")
     @ApiImplicitParam(name = "ids", value = "String [] ids")
     @PostMapping(value = "delAppRole")
@@ -66,7 +73,7 @@ public class UserController {
         return JsonResult.defFail("批量删除小程序失败");
     }
 
-    @LoginRequired
+    //@LoginRequired
     @ApiOperation(value = "获取所有小程序信息")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "Integer"),
@@ -84,6 +91,7 @@ public class UserController {
         return JsonResult.defFail("获取所有小程序信息失败");
     }
 
+    @CrossOrigin
     @ApiOperation(value = "添加用户")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "userName", value = "用户名"),
@@ -94,7 +102,7 @@ public class UserController {
     public JsonResult saveUser(@RequestBody UserVO userVO, HttpServletRequest request) {
         String userId = (String) request.getSession().getAttribute(BaseConstants.LOGIN_USER);
         UserVO u = userService.getUserById(userId);
-        if(null == u){
+        if (null == u) {
             return JsonResult.defFail("当前用户非超级管理员！无添加用户权限");
         }
         log.info(userVO.getName() + "============");
@@ -117,11 +125,12 @@ public class UserController {
         return JsonResult.defFail("用户添加失败！");
     }
 
+    @CrossOrigin
     @ApiOperation(value = "获取编辑用户和权限")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "id", value = "用户id")
     })
-    @PostMapping(value = "selectByKey")
+    @GetMapping(value = "selectByKey")
     @ResponseBody
     public JsonResult selectByKey(String id) {
         try {
@@ -132,7 +141,7 @@ public class UserController {
         return JsonResult.defFail("获取用户信息失败！");
     }
 
-
+    @CrossOrigin
     @ApiOperation(value = "编辑用户")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "userId", value = "用户id"),
@@ -150,6 +159,7 @@ public class UserController {
     }
 
 
+    @CrossOrigin
     @ApiOperation(value = "后台登陆")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "userName", value = "用户名"),
@@ -158,16 +168,35 @@ public class UserController {
     @PostMapping(value = "backLogin", consumes = "application/json;charset=UTF-8")
     @ResponseBody
     public JsonResult backLogin(@RequestBody LoginVO loginVO, HttpServletRequest request) {
-        log.info(loginVO.getUserName() + "============");
-        log.info(loginVO.getPassword() + "============");
+        log.info("================" + loginVO.getPassword());
+        log.info("================" + loginVO.getUserName());
+
+        Map<String, Object> map = new HashMap<>(6);
         if (null == loginVO || StringUtils.isEmpty(loginVO.getUserName()) || StringUtils.isEmpty(loginVO.getPassword())) {
             return JsonResult.defFail("账号和密码必须填写!");
         }
         try {
-            String userId = userService.userLogin(loginVO.getUserName(), loginVO.getPassword());
-            if (!StringUtils.isEmpty(userId)) {
-                request.getSession().setAttribute(BaseConstants.LOGIN_USER, userId);
-                return JsonResult.ok(1);
+            UserVO userVO = userService.userLogin(loginVO.getUserName(), loginVO.getPassword());
+            log.info("================" + userVO);
+            if (null != userVO && !StringUtils.isEmpty(userVO.getId())) {
+                int roleCount = userService.getUserRoleCount(userVO.getId());//获取用户小程序权限的个数
+                if(1==roleCount){
+                    List<AppRoleVO> list = appRoleService.getUserRoleList(userVO.getId());
+                    if(!CollectionUtils.isEmpty(list)){
+                        map.put("appId",list.get(0).getAppId());
+                    }
+                }
+                String token = IdUtils.creatUUID();
+                request.getSession().setAttribute(BaseConstants.LOGIN_USER, token);
+                //request.getSession().setAttribute(BaseConstants.LOGIN_USER, userVO.getId());
+                map.put("name", userVO.getName());
+                map.put("userId", userVO.getId());
+                map.put("token", token);
+                map.put("type", userVO.getType());
+                map.put("roleCount",roleCount);
+                return JsonResult.ok(map);
+            } else {
+                return JsonResult.defFail("账号不存在!");
             }
         } catch (Exception e) {
             log.info("backLogin()" + e);
@@ -175,6 +204,8 @@ public class UserController {
         return JsonResult.defFail("账号或者密码错误！");
     }
 
+    @CrossOrigin
+    @LoginRequired
     @ApiOperation(value = "登陆后获取用户对应的权限")
     @ApiImplicitParams({
             @ApiImplicitParam(name = "userId", value = "用户id")
@@ -210,7 +241,8 @@ public class UserController {
 //        return JsonResult.defFail("确认用户使用权限");
 //    }
 
-    @LoginRequired
+    @CrossOrigin
+    //@LoginRequired
     @ApiImplicitParams({
             @ApiImplicitParam(name = "pageNum", value = "页码", dataType = "Integer"),
             @ApiImplicitParam(name = "pageSize", value = "大小", dataType = "Integer")

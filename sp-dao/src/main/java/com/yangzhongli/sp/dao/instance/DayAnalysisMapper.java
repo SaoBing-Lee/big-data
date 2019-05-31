@@ -12,14 +12,22 @@ import java.util.List;
 @Component
 public interface DayAnalysisMapper extends MyMapper<DayAnalysis> {
 
-
     /**
-     * 获取应用分析的实时数据的详情数据
+     * 获取应用分析的历史数据的趋势图数据
      *
      * @param appId         应用ID
      * @return
      */
-    List<DayAnalysis> selectDayList(@Param("appId") String appId);
+    List<DayAnalysis> selectDay(@Param("appId") String appId,@Param("strDate") String strDate, @Param("endDate") String endDate);
+
+
+    /**
+     * 获取应用分析的历史数据的详情和趋势图数据
+     *
+     * @param appId         应用ID
+     * @return
+     */
+    List<DayAnalysis> selectDayList(@Param("appId") String appId,@Param("strDate") String strDate, @Param("endDate") String endDate);
 
 
 }
