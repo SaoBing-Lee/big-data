@@ -48,7 +48,7 @@ public class DayAnalysisServiceImpl implements DayAnalysisService {
                 strList.add("0");
             }
             map.put("strList",strList);
-            map.put("dateList",dateList);a
+            map.put("dateList",dateList);
         }
         return map;
     }
